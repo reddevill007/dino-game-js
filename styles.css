@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+}
+
+#game_area {
+    width: 500px;
+    height: 200px;
+    border: 1px solid #000;
+    background: white;
+}
+
+#dino {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 150px;
+}
+
+#dino img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.make_dino_jump {
+    animation: dino_jump 500ms linear;
+}
+
+@keyframes dino_jump {
+    0% {
+        top: 150px;
+    }
+
+    30% {
+        top: 100px;
+    }
+
+    70% {
+        top: 100px;
+    }
+
+    100% {
+        top: 150px;
+    }
+}
+
+#obstacle {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 130px;
+    left: 480px;
+    animation: enemy_move 1s infinite linear;
+}
+
+#obstacle img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+@keyframes enemy_move {
+    0% {
+        left: 480px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+#restartBtn {
+    display: none;
+    margin-top: 10px;
+}
